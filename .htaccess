@@ -7,4 +7,10 @@
     RewriteRule ^(.*)$ files/$1
 </IfModule>
 
+<FilesMatch "index.php">
+	order deny,allow
+	deny from all
+	allow from 10.108.49.51
+</FilesMatch>
+
 AddCharset UTF-8 .txt

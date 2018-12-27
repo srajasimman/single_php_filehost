@@ -2,18 +2,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 // global config
 ////////////////////////////////////////////////////////////////////////////////
-$MAX_FILESIZE=512;          //max. filesize in MiB
-$MAX_FILEAGE=180;           //max. age of files in days
-$MIN_FILEAGE=31;            //min. age of files in days
+$MAX_FILESIZE=12;           //max. filesize in MiB
+$MAX_FILEAGE=30;            //max. age of files in days
+$MIN_FILEAGE=14;            //min. age of files in days
 $DECAY_EXP=2;               //high values penalise larger files
 
 $UPLOAD_TIMEOUT=5*60;       //max. time an upload can take before it times out
-$ID_LENGTH=3;               //length of the random file ID
+$ID_LENGTH=12;              //length of the random file ID
 $STORE_PATH="files/";       //directory to store uploaded files in
 $DOWNLOAD_URL="%s";         //%s = placeholder for filename
-$HTTP_PROTO="https";        //protocol to use in links
+$HTTP_PROTO="http";         //protocol to use in links
 
-$ADMIN_EMAIL="complaintsgo@here.com";  //address for inquiries
+$ADMIN_EMAIL="rajasimman.shanmugam@nurd.com";  //address for inquiries
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -43,7 +43,7 @@ else if (isset($argv[1]) &&       //file was called from cmd, to purge old files
 }
 else //nothing special going on, print info text
 {
-    checkConfig(); //check for any php.ini config problems
+    // checkConfig(); //check for any php.ini config problems
     printInfo(); //print info page
 }
 
