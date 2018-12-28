@@ -2,7 +2,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // global config
 ////////////////////////////////////////////////////////////////////////////////
-$MAX_FILESIZE=12;           //max. filesize in MiB
+$MAX_FILESIZE=300;          //max. filesize in MiB
 $MAX_FILEAGE=30;            //max. age of files in days
 $MIN_FILEAGE=14;            //min. age of files in days
 $DECAY_EXP=2;               //high values penalise larger files
@@ -150,6 +150,7 @@ function storeFile($name, $tmpFile, $formatted = false)
         else
         {
             printf($url);
+            printf("\n");
         }
     }
     else
